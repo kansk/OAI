@@ -23,21 +23,15 @@ Version of Ubuntu server 16.04, upto kernel version 14.10. The lowlatency kernel
 
 ## Please following the steps for Openairinterface5g (EPC & ENB)
 
+> $ cd /root
+
 > $ git clone https://github.com/kansk/openairinterface5g.git
-
-> $ cd /tmp
-
-> $ mkdir oai
-
-> $ cd oai
-
-> $ mkdir conf
 
 > $ cd /root/openairinterface5g/oai
 
-> $ cp conf/* /tmp/oai/conf/
+> $ chmod 777 launch.sh 
 
-> $ docker-compose up 
+> $ ./launch.sh
 
 ## After few seconds, Rx/Tx Lights in the B200 should glow.
 
