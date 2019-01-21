@@ -5,6 +5,7 @@ services:
     cap_add:
      - ALL
     image: openairinterface/epc_latest:latest
+    hostname: epc
     container_name: epc
     privileged: true
     volumes:
@@ -22,6 +23,7 @@ services:
 
   enb:
     image: openairinterface/enb_latest:latest
+    hostname: enb
     depends_on:
      - epc
     container_name: enb
