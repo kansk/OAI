@@ -44,9 +44,9 @@ Version of Ubuntu server 16.04, upto kernel version 14.10. The lowlatency kernel
 > /tmp/oai/conf/enb.10MHz.b200 and
 
 > /openairinterface5g/oai/ vi docker-compose.yml ( line 20 : ipv4_address and line 37 : ipv4_address )
-----------------------------
+
 ## Checklist
-------------------------
+
 1, SQN no need to update in users table.
 
 2, HSS.conf op key =”” # need empty.
@@ -55,7 +55,7 @@ Version of Ubuntu server 16.04, upto kernel version 14.10. The lowlatency kernel
 
 >INSERT INTO `mmeidentity` VALUES (2,epc.OpenAir5G.Alliance','OpenAir5G.Alliance',0);
 
-mysql> update users set sqn = 00000000000000002112 where imsi = 208920100001101;
+>UPDTAE users SET SQN = 00000000000000002112 WHERE IMSI = 208920100001101;
 
 Note: Current sim sqn number value need check from the sim and update in to users table.
 Finally, do not forget to change the SQN number into the oai_db.
