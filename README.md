@@ -44,3 +44,18 @@ Version of Ubuntu server 16.04, upto kernel version 14.10. The lowlatency kernel
 > /tmp/oai/conf/enb.10MHz.b200 and
 
 > /openairinterface5g/oai/ vi docker-compose.yml ( line 20 : ipv4_address and line 37 : ipv4_address )
+
+## Checklist
+1, SQN no need to update in users table.
+2, HSS.conf op key =”” # need empty
+3,epc container hostname need to insert in to mmeidentity table.
+INSERT INTO `mmeidentity` VALUES (2,epc.OpenAir5G.Alliance','OpenAir5G.Alliance',0);
+4, ip address need check all below config files
+EPC container
+/use/local/etc/oai/mme.conf.
+/use/local/etc/oai/spgw.conf. 
+-	need to change the UE_MTU value and DNS IP Address
+ENB container 
+/home/opencells-mods/enb.10MHz.b200
+5, Rx/Tx Lights in the B200 should glow
+
