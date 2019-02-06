@@ -4,7 +4,7 @@ services:
   epc:
     cap_add:
      - ALL
-    image: openairinterface/epc_latest:latest
+    image: kannan1981/epc_latest:latest
     hostname: epc
     container_name: epc
     privileged: true
@@ -18,11 +18,11 @@ services:
      - /bin/bash
     networks:
      default:
-       ipv4_address: 172.18.0.2
+       ipv4_address: 172.19.0.2
     tty: true
 
   enb:
-    image: openairinterface/enb_latest:latest
+    image: kannan1981/enb_latest:latest
     hostname: enb
     depends_on:
      - epc
@@ -36,7 +36,7 @@ services:
      - /bin/bash
     networks:
      default:
-       ipv4_address: 172.18.0.3
+       ipv4_address: 172.19.0.3
     tty: true
   
 networks:
@@ -45,5 +45,5 @@ networks:
   ipam:
    driver: default
    config:
-    - subnet: 172.18.0.0/16
-      gateway: 172.18.0.1
+    - subnet: 172.19.0.0/16
+      gateway: 172.19.0.1
