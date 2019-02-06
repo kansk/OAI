@@ -135,7 +135,7 @@ eNBs =
         SCTP_OUTSTREAMS = 2;
     };
 
- mme_ip_address = ( { ipv4 = "172.18.0.2";
+ mme_ip_address = ( { ipv4 = "172.19.0.2";
  ipv6 = "192:168:30::17";
  active = "yes";
  preference = "ipv4";
@@ -145,10 +145,10 @@ eNBs =
 NETWORK_INTERFACES : 
  {
  ENB_INTERFACE_NAME_FOR_S1_MME = "eth0";
- ENB_IPV4_ADDRESS_FOR_S1_MME = "172.18.0.3/8";
+ ENB_IPV4_ADDRESS_FOR_S1_MME = "172.19.0.3/8";
 
  ENB_INTERFACE_NAME_FOR_S1U = "eth0";
- ENB_IPV4_ADDRESS_FOR_S1U = "172.18.0.3/8";
+ ENB_IPV4_ADDRESS_FOR_S1U = "172.19.0.3/8";
  ENB_PORT_FOR_S1U = 2152; # Spec 2152
  };
     log_config :
